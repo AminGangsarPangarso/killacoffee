@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";  
 import "swiper/css";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -34,9 +35,11 @@ const ProductPage = () => {
           {products.map((product) => (
             <SwiperSlide key={product.id}>
               <div className="bg-[#54372B] rounded-md shadow-md ">
-                <img
+                <Image
                   src={product.image_url}
                   alt={product.name}
+                  width={300} 
+                    height={240} 
                   className="w-full h-60 object-cover rounded-t-md" 
                 />
                 <div className="p-4 text-white">

@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Layout from "./components/layout/page";
+// import Layout from "../components/Layout"; // Perbaiki jalur impor sesuai struktur proyek Anda
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <Layout>
+          {children}
+        </Layout> */}
+        <Layout>
+          {children}
+        </Layout>
+      </body>
     </html>
   );
 }

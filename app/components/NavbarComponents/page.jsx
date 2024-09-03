@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbarmenu } from '../constant/page'
+import {Navbarmenu} from '../constant/page'
 import Link from 'next/link'
 import { FaUser, FaShoppingCart } from 'react-icons/fa'
 
